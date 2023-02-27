@@ -1,0 +1,142 @@
+// -------banner-----
+.banner{
+    background:#ffffff;
+    padding:5rem 0;
+    padding-top: 11rem;
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content:space-between;
+        
+        margin: 0 2rem;
+        
+    }
+    &__text{
+       
+        text-align: center;
+        h1{
+            color: $clr-primary;
+            font-size: 3rem;
+            font-weight: 800;
+            max-width: 40rem;
+            line-height: 1.2;
+            margin-bottom:5rem;
+            
+            
+        }
+        p{
+            max-width: 40rem;
+            text-align: justify;
+            margin: 3rem 0;
+            font-weight: 400;
+            margin-bottom:6rem;
+            
+
+        }
+        a{
+            border: 1px solid transparent !important;
+            text-transform: uppercase;
+            color: $clr-light;
+            font-weight: 400;
+            border-radius: 5rem;
+            background: $clr-primary;
+            padding: 2rem 3rem;
+            &:hover{
+                background: $clr-dark;
+                border: 1px solid $clr-primary;
+                color: $clr-primary;
+            }
+
+
+        }
+
+
+
+
+
+    }
+    img{
+        width: 30rem;
+    }
+    // -----media---
+    @include mediaQuery($break-lg){
+        .banner{
+            padding: 7rem 0 0 0;
+            &__wrapper{
+                flex-direction: row;
+                margin: 7rem 5rem 0 5rem;
+                img{
+                    width: unset;
+                }
+            }
+        
+        &__text{
+            text-align: left;
+            h1{
+                font-size: 11rem;
+                max-width: 52rem;
+                line-height: 0.8;
+                margin-bottom: 5rem;
+            }
+            p{
+                text-align: justify;
+                max-width: 40rem;
+                margin-bottom: 6rem;
+            }
+        }
+        }
+    }
+}
+// -----services--------
+.hm-services{
+    background:$clr-dark;
+    &__wrapper{
+        margin: 5rem 3rem;
+    }
+    &__item{
+    text-align: center;
+    margin: 6rem 0;
+
+    i{
+    font-size: 5rem;
+    color:$clr-primary;
+    margin-bottom: 2rem;
+    }
+    h4{
+    color: $clr-primary;
+    font-size: 2.5rem;
+    font-weight: 600;
+    }
+    p{
+    color:$clr-light;
+    margin-bottom: 7rem;
+    text-align: justify;
+    
+    }
+    a{
+        border: 1px solid transparent !important;
+        text-transform: uppercase;
+        color: $clr-light;
+        font-weight: 400;
+        border-radius: 5rem;
+        background: $clr-primary;
+        padding: 2rem 3rem;
+        &:hover{
+            background: $clr-light;
+            border: 1px solid $clr-primary;
+            color: $clr-primary;
+
+        }
+    }
+}
+//--------media------ 
+    @include mediaQuery($break-lg){
+       
+            &__wrapper{
+                margin: 0 5rem;
+                @include grid(3, 5rem)
+            }
+    }
+}
